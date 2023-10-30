@@ -25,5 +25,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/', [App\Http\Controllers\HomeController::class, 'Profile'])->name('Profile');
+    Route::get('/editProfile', [App\Http\Controllers\UserProfileController::class, 'showprofile'])->name('editProfile');
+
     Route::any('/editProfile', [App\Http\Controllers\UserProfileController::class, 'EditProfile'])->name('editProfile');
 });

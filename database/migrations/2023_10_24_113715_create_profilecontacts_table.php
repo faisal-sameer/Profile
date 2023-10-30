@@ -18,8 +18,8 @@ class CreateProfilecontactsTable extends Migration
             $table->timestamps();
             //<---------- FK from User tables ------------>//
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('Specialty');
-            $table->integer('phone');
+            $table->string('Specialty')->nullable();
+            $table->integer('phone')->nullable();
             $table->string('Linkdin');
             $table->string('Github');
         });
