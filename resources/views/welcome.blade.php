@@ -519,43 +519,6 @@
             });
         });
     </script>
-<script>
-    function onOpenAlwatanyaCompany() {
-        var modal = document.getElementById("myModalAlwatanyaCompany");
-        modal.style.display = "block";
-
-    }
-
-    function closeAlwatanyaCompany() {
-        var modal = document.getElementById("myModalAlwatanyaCompany");
-        modal.style.display = "none";
-    }
-</script>
-<script>
-    function onOpenUQU() {
-        var modal = document.getElementById("myModalUQU");
-        modal.style.display = "block";
-
-    }
-
-    function closeUQU() {
-        var modal = document.getElementById("myModalUQU");
-        modal.style.display = "none";
-    }
-</script>
-<script>
-    function onOpennoor() {
-        var modal = document.getElementById("myModalnoor");
-        modal.style.display = "block";
-
-    }
-
-    function closenoor() {
-        var modal = document.getElementById("myModalnoor");
-        modal.style.display = "none";
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 
 </body>
 </html>

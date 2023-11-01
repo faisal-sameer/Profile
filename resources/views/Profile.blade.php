@@ -1,13 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-
-<div class="header">
-    <img class="profile-image bounce-in-left" src="/image/mypic1.jpeg" alt="Profile Picture">
+<svg xmlns="http://www.w3.org/2000/svg" class="color-change-2x " viewBox="0 0 1440 320">
+    <path fill="#4f066582" fill-opacity="1" d="M0,96L80,117.3C160,139,320,181,480,176C640,171,800,117,960,101.3C1120,85,1280,107,1360,117.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+    </path>
     
-    <div class="name bounce-in-left">{{ $userData->name }}</div>
-    <div class="job-title bounce-in-left">{{ $otherData->Specialty }}</div>
-</div>
+    <foreignObject x="0" y="0" width="100%" height="100%">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+            <img class="profile-image bounce-in-left" src="/image/mypic1.jpeg" alt="Profile Picture" width="100">
+            <div class="name bounce-in-left" style="color: white;">{{ $userData->name }}</div>
+            <div class="job-title bounce-in-left" style="color: white;">{{ $otherData->Specialty }}</div>
+        </div>
+    </foreignObject>
+</svg>
+
+<div class='box'>
+    <div class='wave -one'> </div>
+    <div class='wave -two'></div>
+  </div>
+
 
 <section class="info shadow-drop-2-center">
     <div class="info-item">
@@ -41,22 +52,24 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
   </h5>
 </div>
 
-<!-- Card body -->
-<div class="p-6 mt-auto">
+ <!-- Card body -->
+ <div class="p-6 mt-auto flex flex-col justify-center items-center">
+    <!-- Title -->
+    <h5 class="mb-2 text-xl font-bold tracking-wide text-center text-neutral-800 dark:text-neutral-50">
+        Web Developer
+    </h5>
 
-  <!-- Title -->
-  <h5 class="mb-2 text-xl font-bold tracking-wide text-center text-neutral-800 dark:text-neutral-50">
-    Web Developer
-      </h5>
-
-  <!-- Button -->
-  <a href="#" onclick="onOpenAlwatanyaCompany()"
-    class="flex flex-col items-center mt-3 inline-block rounded bg-blue-500 px-6 pb-2  pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-blue-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-    more details
-      </a>
-
+    <!-- Button -->
+    <button
+        type="button"
+        class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+        data-te-toggle="modal"
+        data-te-target="#AL-watanya"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        more details
+    </button>
 </div>
-
 <!-- Card footer -->
 <div class="border-t-2 border-neutral-100 px-6 py-4 dark:border-neutral-500">
   <h5 class="flex items-center justify-center text-neutral-500 dark:text-neutral-300">
@@ -88,7 +101,7 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
 </div>
 
 <!-- Card body -->
-<div class="p-6 mt-auto">
+<div class="p-6 mt-auto flex flex-col justify-center items-center">
 
   <!-- Title --> 
   <h5 class="mb-2 text-xl font-bold tracking-wide text-center text-neutral-800 dark:text-neutral-50">
@@ -96,10 +109,15 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
       </h5>
 
   <!-- Button -->
-  <a href="#" onclick="onOpenUQU()"
-    class="flex flex-col items-center mt-3 inline-block rounded bg-blue-500 px-6 pb-2  pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-blue-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-    more details
-      </a>
+  <button
+  type="button"
+  class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+  data-te-toggle="modal"
+  data-te-target="#UQU"
+  data-te-ripple-init
+  data-te-ripple-color="light">
+  more details
+</button>
 
 </div>
 
@@ -134,7 +152,7 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
 </div>
 
 <!-- Card body -->
-<div class="p-6 mt-auto">
+<div class="p-6 mt-auto flex flex-col justify-center items-center">
 
   <!-- Title -->
   <h5 class="mb-2 text-xl font-bold tracking-wide text-center text-neutral-800 dark:text-neutral-50">
@@ -142,10 +160,15 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
           </h5>
 
   <!-- Button -->
-  <a href="#" onclick="onOpennoor()"
-    class="flex flex-col items-center mt-3 inline-block rounded bg-blue-500 px-6 pb-2  pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-blue-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-    more details
-      </a>
+  <button
+  type="button"
+  class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+  data-te-toggle="modal"
+  data-te-target="#Mis"
+  data-te-ripple-init
+  data-te-ripple-color="light">
+  more details
+</button>
 
 </div>
 
@@ -247,93 +270,257 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
     </section>
 
     <section class="info shadow-drop-2-center p-6 my-6 bg-white rounded-lg">
-        <div class="info-item">
+        <div class="info-item text-center">
             <h2 class="text-2xl mb-4">Technical Skills</h2>
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>JS</li>
-                <li>PHP OOP</li>
+                <li>bootstrap</li>
+                <li>tailwind</li>
+                 <li>JS</li>
+                 <li>Vue.JS</li>
+                 <li>PHP OOP</li>
                 <li>Laravel Framework</li>
                 <li>Mysql</li>
                 <li>Oracle DB</li>
-                <li>Vue JS</li>
+                <li>Mongo DB</li>
                 <li>Flutter</li>
                 <li>GitHub</li>
                 <li>Oracle Apex</li>
             </ul>
         </div>
     </section>
-    
-    <section class="education shadow-drop-2-center p-6 my-6 bg-white rounded-lg">
-        <h2 class="text-2xl">Education</h2>
-        <div class="education-item">
-            <h3 class="text-lg">Bachelor of Computer Science | Umm Al Qura University</h3>
-            <p>2015 - 2020</p>
-        </div>
-    </section>
-</div>
-
-
-
-
-<div id="myModalAlwatanyaCompany" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span onclick="closeAlwatanyaCompany()" class="close">&times;</span>
-        </div>
-
-        <div class="modal-body">
-            <section class="education">
-                <h2>Alwatanya Company</h2>
-                <div class="education-item">
-            <p>Design, develop, and maintain a dynamic website for Alwatanya Company, providing ongoing support and enhancements . </p>
-                </div>
-            </section>
+    <div class="flex flex-col md:flex-row">
+        <section class="education shadow-drop-2-center p-6 my-6 md:my-10 bg-white rounded-lg">
+            <div class="info-item text-center">
+                <h2 class="text-2xl mb-4">Other Skills</h2>
+                <ul>
+                    <li>Figma</li>
+                    <li>Adobe Xd</li>
+                    <li>Microsoft office 365</li>
+               
+                </ul>
             </div>
-
+            <hr
+            class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+            <div class="info-item text-center">
+                <h2 class="text-2xl mb-4">Languages</h2>
+                <ul>
+                    <li>Arabic</li>
+                    <li>English</li>
+               
+                </ul>
+            </div>
+        </section>
+        
+        <section class="education shadow-drop-2-center p-6 my-6 md:my-10 bg-white rounded-lg">
+            <h2 class="text-2xl">Education</h2>
+            <div class="education-item">
+                <h3 class="text-lg">Bachelor of Computer Science | Umm Al Qura University</h3>
+                <p>2015 - 2020</p>
+            </div>
+            <hr
+            class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+            <h2 class="text-2xl">Certificates</h2>
+            <div class="education-item text-center">
+                <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">
+                    AL-watanya Customs Clearance Company
+                </h5>
+                <h3 class="text-lg">Certificate of Experience, worked as a programmer at the AL-watanya Customs Clearance Company</h3>
+                <a href="{{ asset('pdf/شهادة من شركة الوطنية للتخليص الجمركي.pdf') }}" 
+                   class="inline-block rounded bg-info px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]">
+                    Pdf
+                </a>
+            </div>
+            <div class="education-item text-center mt-2">
+                <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">
+                    Mis , AL-Noor-Hospital
+                                </h5>
+                <h3 class="text-lg">Certificate of Experience, worked as a Web Designer
+                    at the AL-Noor-Hospital</h3>
+                <a href="{{ asset('pdf/شهادة خبره فيصل.pdf') }}" 
+                   class="inline-block rounded bg-info px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]">
+                   Pdf
+                </a>
+            </div>
+        </section>
     </div>
 </div>
-<div id="myModalUQU" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span onclick="closeUQU()" class="close">&times;</span>
-        </div>
+<div
+  data-te-modal-init
+  class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+  id="AL-watanya"
+  tabindex="-1"
+  aria-labelledby="exampleModalScrollableLabel"
+  aria-hidden="true">
+  <div
+    data-te-modal-dialog-ref
+    class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+    <div
+      class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+      <div
+        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+        <!--Modal title-->
+        <h5
+          class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+          id="exampleModalScrollableLabel">
+          Alwatanya Company
+                </h5>
+        <!--Close button-->
+        <button
+          type="button"
+          class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+          data-te-modal-dismiss
+          aria-label="Close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
 
-        <div class="modal-body">
-            <section class="education">
-                <h2>Umm Al-Qura University</h2>
-                <div class="education-item">
-            <p>Developing an interactive website to celebrate the 90th National Day of the Kingdom of Saudi Arabia, 
-                which presents attractive challenges for users to participate and celebrate this important event.
-                 The competition was in cooperation with the Deanship of Student Affairs at Umm Al-Qura University. </p>
-                </div>
-            </section>
-            </div>
+      <!--Modal body-->
+      <div class="relative overflow-y-auto p-4">
+        <p>Design, develop, and maintain a dynamic website for Alwatanya Company, providing ongoing support and enhancements . </p>
 
+      </div>
+
+   
     </div>
+  </div>
 </div>
-<div id="myModalnoor" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span onclick="closenoor()" class="close">&times;</span>
-        </div>
 
-        <div class="modal-body">
-            <section class="education">
-                <h2>Mis , AL-Noor-Hospital</h2>
-                <div class="education-item">
-            <p>I have had the privilege of working in the Programs Department at Al-Noor Specialist Hospital, where I have been dedicated to developing electronic services that span various areas within the hospital, including laboratory operations and the blood bank. </p>
-                </div>
-            </section>
-            </div>
+<div
+  data-te-modal-init
+  class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+  id="UQU"
+  tabindex="-1"
+  aria-labelledby="exampleModalScrollableLabel"
+  aria-hidden="true">
+  <div
+    data-te-modal-dialog-ref
+    class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+    <div
+      class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+      <div
+        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+        <!--Modal title-->
+        <h5
+          class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+          id="exampleModalScrollableLabel">
+          UQU
+                        </h5>
+        <!--Close button-->
+        <button
+          type="button"
+          class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+          data-te-modal-dismiss
+          aria-label="Close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
 
+      <!--Modal body-->
+      <div class="relative overflow-y-auto p-4">
+        <p>Developing an interactive website to celebrate the 90th National Day of the Kingdom of Saudi Arabia, 
+            which presents attractive challenges for users to participate and celebrate this important event.
+             The competition was in cooperation with the Deanship of Student Affairs at Umm Al-Qura University. </p>
+      </div>
+
+   
     </div>
+  </div>
 </div>
+
+
+
+<div
+  data-te-modal-init
+  class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+  id="Mis"
+  tabindex="-1"
+  aria-labelledby="exampleModalScrollableLabel"
+  aria-hidden="true">
+  <div
+    data-te-modal-dialog-ref
+    class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+    <div
+      class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+      <div
+        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+        <!--Modal title-->
+        <h5
+          class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+          id="exampleModalScrollableLabel">
+          Mis
+                        </h5>
+        <!--Close button-->
+        <button
+          type="button"
+          class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+          data-te-modal-dismiss
+          aria-label="Close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!--Modal body-->
+      <div class="relative overflow-y-auto p-4">
+        <p>I have had the privilege of working in the Programs Department at Al-Noor Specialist Hospital, where I have been dedicated to developing electronic services that span various areas within the hospital, including laboratory operations and the blood bank. </p>
+
+      </div>
+
+   
+    </div>
+  </div>
+</div>
+
+
 @endsection
+
+@section('script')
+    <script>
+        // Initialization for ES Users
+import {
+  Modal,
+  Ripple,
+  initTE,
+} from "tw-elements";
+
+initTE({ Modal, Ripple });
+    </script>
+@endsection
+
+

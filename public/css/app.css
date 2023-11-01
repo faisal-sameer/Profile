@@ -91,7 +91,39 @@ body {
     text-align: center;
     padding: 20px;
 }
+.box {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg); 
+  left: 0;
+}
 
+.wave {
+  position: absolute;
+  opacity: .4;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  border-radius: 43%;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  from {transform: rotate(360deg);}
+}
+
+.wave.-one {
+  animation: rotate 10000ms infinite linear;
+  opacity: 5%;
+  background: white;
+}
+
+.wave.-two {
+  animation: rotate 6000ms infinite linear;
+  opacity: 10%;
+  background: white;
+}
 /* Profile image styles */
 .profile-image {
     width: 150px;
