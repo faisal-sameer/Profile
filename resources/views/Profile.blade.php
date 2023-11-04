@@ -229,7 +229,7 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
    
 </div>
 </section>-->
-<div class="container mx-auto px-4">
+<div class="sm:flex sm:justify-center">
     <section class="info shadow-drop-2-center p-6 my-6 bg-white rounded-lg">
         <div class="info-item">
             <h2 class="text-2xl text-center mb-4">Contact</h2>
@@ -259,7 +259,7 @@ class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07
             </div>
             <div class="flex items-center mb-4">
                 <img src="/image/GitHub.png" alt="GitHub" class="w-12 h-12" id="iconimage">
-                <a href="https://github.com/faisal-sameer" class="ml-4">Github</a>
+                <a href="{{ $otherData->Github }}" class="ml-4">Github</a>
             </div>
             <br>
             <div class="flex items-center mb-4">
