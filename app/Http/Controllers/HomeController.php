@@ -49,4 +49,9 @@ class HomeController extends Controller
 
         return view('Profile', ['userData' => $userData, 'otherData' => $otherData]);
     }
+
+    protected function main()
+    {
+        return view('main');
+    }
 }

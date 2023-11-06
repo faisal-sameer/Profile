@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Feisal Profile</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -88,10 +88,23 @@
                   data-te-nav-link-ref
                   data-te-ripple-init
                   data-te-ripple-color="light"
-                  >                    {{ config('app.name', 'Laravel') }}
+                  >                 Home
                   </a
                 >
               </li>
+              <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                <a
+                  class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  href="{{ asset('pdf/FeisalCV.pdf') }}"
+                  data-te-nav-link-ref
+                  data-te-ripple-init
+                  download="pdf/FeisalCV.pdf"
+                  data-te-ripple-color="light"
+                  >                 Download CV
+                  </a
+                >
+              </li>
+
               @guest
 
               @if (Route::has('login'))
