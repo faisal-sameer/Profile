@@ -25,9 +25,7 @@
 
 <body>
     <br>
-    <br>
-    <br>
-    <br>
+
     <div class="container mx-auto">
         <div class="relative mb-3" data-te-date-timepicker-init data-te-input-wrapper-init>
             <input type="text"
