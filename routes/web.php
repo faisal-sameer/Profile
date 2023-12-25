@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserProfileController;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,19 +13,16 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//
-Route::group(['middleware' => 'prevent-back-history'], function () {
+Route::get('/', function () {
+    return view('welcome');
+});
 
-    Auth::routes();
-
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'Profile'])->name('Profile');
-    Route::get('/main', [App\Http\Controllers\HomeController::class, 'main'])->name('main');
-
-    Route::get('/editProfile', [App\Http\Controllers\UserProfileController::class, 'showprofile'])->name('editProfile');
-
-    Route::any('/editProfile', [App\Http\Controllers\UserProfileController::class, 'EditProfile'])->name('editProfile');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
